@@ -1,29 +1,39 @@
 {% extends "base.html" %}
 
 {% block title %}
-	Homepage | My World of Text
+Homepage | My World of Text
 {% endblock %}
 
 {% block header %}
-	<h1>About My World of Text</h1>
+<h1>About My World of Text</h1>
 {% endblock %}
 
 {% block content %}
-	<div class="text">
-		<p>
-			<a href="/">My World of Text</a> is an infinite
-			grid of text editable by any visitor. The changes made by other people
-			appear on your screen as they happen. Everyone starts in the same place, but
-			you can scroll through the world using your mouse.
-		</p>
-		<p>
-			Put any letters at the end of the URL to go to a new world. For
-			example, <a href="/forexample">{{ website }}forexample</a>.
-			They all start off blank. You can also <a href="/accounts/profile/">create a custom
-			world</a> for you and your friends.
-		</p>
-		<p>
-			This is a recreation of <a href="https://www.yourworldoftext.com">YWOT</a>
-		</p>
-	</div>
+<div class="text">
+	<p>
+		<a href="/">My World of Text</a> is a hobby-based, self-hosted recreation of
+		FP/system2k's <a href="https://github.com/system2k/NodeWorldOfText">NodeWorldofText</a>.
+		It is an infinitely large collaborative text canvas where anyone can write anywhere,
+		at any time. I created this instance so I can freely experiment and add features that
+		the original OWOT/YWOT may not have.
+	</p>
+	<p>
+		You can create or explore worlds simply by adding any letters to the end of the URL.
+		For example, <a href="/forexample">{{ website }}forexample</a>. Every world begins
+		blank, and you can also <a href="/accounts/profile/">create a custom world</a> to
+		share with friends or communities.
+	</p>
+	<p>
+		This site is community-influenced. I am open to feature suggestions, improvements,
+		and experimental ideas. Join the community and help shape the direction of the site:
+	</p>
+	<p>
+		Subreddit: <a href="https://www.reddit.com/r/myworldoftext/">/r/myworldoftext</a><br>
+		Discord Server:
+		<a href="https://discord.gg/WceHr54rCv">Join here</a>
+	</p>
+	<p>
+		Contact: <a href="mailto:support@myworldoftext.com">support@myworldoftext.com</a>
+	</p>
+</div>
 {% endblock %}
