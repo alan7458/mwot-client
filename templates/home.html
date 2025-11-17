@@ -5,13 +5,15 @@ Homepage | My World of Text
 {% endblock %}
 
 {% block header %}
-<h1>About My World of Text</h1>
+<h1>My World of Text</h1>
 {% endblock %}
 
 {% block content %}
 <div class="text">
+	<h2>Info</h2>
 	<p>
-		<a href="/">My World of Text</a> is a hobby-based, self-hosted recreation of
+		<a href="https://web.myworldoftext.com/">My World of Text</a> is a hobby-based, self-hosted
+		recreation of
 		FP/system2k's <a href="https://github.com/system2k/NodeWorldOfText">NodeWorldofText</a>.
 		It is an infinitely large collaborative text canvas where anyone can write anywhere,
 		at any time. I created this instance so I can freely experiment and add features that
@@ -19,8 +21,10 @@ Homepage | My World of Text
 	</p>
 	<p>
 		You can create or explore worlds simply by adding any letters to the end of the URL.
-		For example, <a href="/forexample">{{ website }}forexample</a>. Every world begins
-		blank, and you can also <a href="/accounts/profile/">create a custom world</a> to
+		For example, <a href="https://web.myworldoftext.com/forexample">https://web.myworldoftext.com/forexample</a>.
+		Every world begins
+		blank, and you can also <a href="https://web.myworldoftext.com/accounts/profile/">create a
+			custom world</a> to
 		share with friends or communities.
 	</p>
 	<p>
@@ -35,5 +39,41 @@ Homepage | My World of Text
 	<p>
 		Contact: <a href="mailto:support@myworldoftext.com">support@myworldoftext.com</a>
 	</p>
+	<h2>Sites</h2>
+	<p>
+		<a href="https://web.myworldoftext.com/">My World of Text</a>
+		<img class="icon-img" src="/static/img/mwot32x.png" alt="MWOT" />
+	</p>
+	<p>
+		<a href="https://paste.myworldoftext.com/">Image Paster</a>
+		<img class="icon-img" src="/static/img/mwot32x.png" alt="MWOT" />
+	</p>
+	<p>
+		<a href="https://piano.myworldoftext.com/">Multiplayer Piano</a>
+		<img class="icon-img" src="/static/img/piano512x.png" alt="Piano" />
+	</p>
 </div>
+
+<div id="controls">
+	<b><a href="https://github.com/alan7458/ebsprite-html">ebsprite</a> control panel</b><br>
+	<label for="spriteId">Sprite ID:</label>
+	<input type="number" id="spriteId" min="0" value="0">
+	<button id="changeSprite">Change Sprite</button>
+</div>
+
+<script src="/static/yw/javascript/ebsprite.min.js"></script>
+    <script>
+        //ebsprite.start(Math.floor(Math.random() * 100) + 1);
+        ebsprite.start(0);
+
+        document.getElementById("changeSprite").addEventListener("click", () => {
+            const id = parseInt(document.getElementById("spriteId").value);
+            if (!isNaN(id)) {
+                ebsprite.stop();
+                ebsprite.start(id);
+            }
+        });
+
+        spriteData.forEach((s, i) => console.log(i, s.name))
+    </script>
 {% endblock %}
