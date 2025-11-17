@@ -1,5 +1,7 @@
 # My World of Text Client
 
+https://web.myworldoftext.com
+
 A hobby-based, self-hosted recreation of [FP/system2k's NodeWorldOfText](https://github.com/system2k/NodeWorldOfText).  
 It provides an infinitely large collaborative text canvas where anyone can write anywhere, at any time. This client allows for experimentation and additional features not present in the original OWOT/YWOT.
 
